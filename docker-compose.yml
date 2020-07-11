@@ -1,0 +1,14 @@
+
+jwt-example-postgres:
+  image: postgres:latest
+  environment:
+    - POSTGRES_DB=demodb
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=secret123
+
+spring-security-jwt-example:
+  image: hong/spring-security-jwt-example
+  links:
+    - jwt-example-postgres:postgres
+  ports:
+    - 8000:8000
