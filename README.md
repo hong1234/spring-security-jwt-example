@@ -10,6 +10,10 @@ mvn spring-boot:run
 
 ////////////run in Docker containers/////////////////////
 
+// app building
+
+mvn clean package
+
 // build Image “hong/spring-security-jwt-example”
 
 sudo docker build -t hong/spring-security-jwt-example .
@@ -17,6 +21,10 @@ sudo docker build -t hong/spring-security-jwt-example .
 // run containers
 
 sudo docker-compose up
+
+// stop and delete all containers
+
+sudo docker-compose down
 
 
 /////////////get jwt-Token/////////////////////
